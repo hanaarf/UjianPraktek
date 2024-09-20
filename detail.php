@@ -74,13 +74,13 @@ include './koneksi.php';
         </thead>
         <tbody>
             <?php
-            $data = mysqli_query($koneksi, "SELECT * FROM peserta ");
+            $data = mysqli_query($koneksi, "SELECT * FROM bootcamp ");
             while($peserta = mysqli_fetch_array($data)){
             ?>
             <tr>
                 <td><?php print $peserta['id'] ?></td>
                 <td><?php print $peserta['nomor_bootcamp'] ?></td>
-                <td><?php print $peserta['nama'] ?></td>
+                <td><?php print $peserta['nama_peserta'] ?></td>
                 <td><?php print $peserta['nama_bootcamp'] ?></td>
                 <td><?php print $peserta['jadwal_kelas'] ?></td>
                 <td><?php print $peserta['telp'] ?></td>

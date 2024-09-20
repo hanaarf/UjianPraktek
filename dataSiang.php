@@ -57,27 +57,25 @@ include './koneksi.php';
         <thead>
             <tr>
                 <th width="5%">No.</th>
-                <th>Nama Lengkap</th>
-                <th>Umur</th>
-                <th>Jenis Kelamin</th>
-                <th>Nomor Telepon</th>
-                <th>Alamat</th>
+                <th>nomor bootcamp</th>
+                <th>nama peserta</th>
+                <th>nama bootcamp</th>
                 <th>jadwal kelas</th>
+                <th>no telp</th>
             </tr>
         </thead>
         <tbody>
             <?php
-            $data = mysqli_query($koneksi, "SELECT * FROM peserta WHERE jadwal_kelas = 'siang'");
+            $data = mysqli_query($koneksi, "SELECT * FROM bootcamp WHERE jadwal_kelas = 'siang'");
             while($peserta = mysqli_fetch_array($data)){
             ?>
             <tr>
                 <td><?php print $peserta['id'] ?></td>
-                <td><?php print $peserta['nama'] ?></td>
-                <td><?php print $peserta['umur'] ?></td>
-                <td><?php print $peserta['jenis_kelamin'] ?></td>
-                <td><?php print $peserta['telp'] ?></td>
-                <td><?php print $peserta['alamat'] ?></td>
+                <td><?php print $peserta['nomor_bootcamp'] ?></td>
+                <td><?php print $peserta['nama_peserta'] ?></td>
+                <td><?php print $peserta['nama_bootcamp'] ?></td>
                 <td><?php print $peserta['jadwal_kelas'] ?></td>
+                <td><?php print $peserta['telp'] ?></td>
             </tr>
             <?php
             }

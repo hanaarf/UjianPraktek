@@ -67,21 +67,7 @@
         <br>
         <textarea name="alamat"><?php print $peserta['alamat'] ?></textarea>
         <br><br>
-
-        <label>nomor bootcamp :</label>
-        <br>
-        <input type="int" name="nomor_bootcamp" value="<?php print $peserta['nomor_bootcamp'] ?>">
-        <br><br>
-
-        <label>nama bootcamp :</label>
-        <br>
-        <input type="text" name="nama_bootcamp" value="<?php print $peserta['nama_bootcamp'] ?>">
-        <br><br>
-
-        <label>jadwal kelas : </label>
-        <br>
-        <input type="text" name="jadwal_kelas" value="<?php print $peserta['jadwal_kelas'] ?>"><br>
-
+        
         <button type="submit">Simpan Data</button>
     </form>
 </body>
