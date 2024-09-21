@@ -3,10 +3,10 @@ include "./koneksi.php";
 $create = "CREATE TABLE bootcamp (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nomor_bootcamp int,
-    nama_peserta varchar(200),
+    id_peserta int,
+    FOREIGN KEY (id_peserta) references peserta(id),
     nama_bootcamp varchar(200),
-    jadwal_kelas enum('pagi','siang'),
-    telp int
+    jadwal_kelas enum('pagi','siang')
 )";
 
 if($koneksi->query(query: $create) === true) {
